@@ -15,3 +15,11 @@ czbat () {
 cfzf () {
 	 fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}'
 }
+
+catuin () {
+	atuin search -i
+}
+
+cb () {
+	batcat $1
+}

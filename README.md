@@ -28,3 +28,5 @@ For executables, I use a directory called `~/.exec` that I add to `$PATH`.
 * [atuin](https://github.com/atuinsh/atuin)
 * [exa](https://github.com/ogham/exa)
 * [btop](https://github.com/aristocratos/btop)
+* [zoxide](https://github.com/ajeetdsouza/zoxide)
+

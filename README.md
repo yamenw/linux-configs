@@ -1,6 +1,9 @@
 # Personal Configs Repo
 
-Those are just configs that I have on my personal machine.
+*just configs that I have on my personal machine*
+
+> [!NOTE]
+> I just made this to share with friends.
 
 ## How to Use
 

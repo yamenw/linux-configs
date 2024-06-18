@@ -48,3 +48,8 @@ You may also use [chezmoi](https://github.com/twpayne/chezmoi) for this but I li
 ## Prompt
 
 The theme can be found [here](./theme.omp.toml) for OMP.
+
+## Shell
+
+`zsh` is used with `zinit`.
+

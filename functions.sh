@@ -25,5 +25,5 @@ cb () {
 }
 
 cll () {
-	exa --icons
+	exa --icons --classify $@
 }

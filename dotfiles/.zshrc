@@ -31,6 +31,10 @@ zinit light zsh-users/zsh-autosuggestions
 autoload -Uz compinit && compinit
 
 
+### Zsh History
+HISTSIZE=50000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
 
 ### Yamens scripts
 source ~/.config/yamens/functions.sh
@@ -38,14 +42,16 @@ source ~/.config/yamens/nnn-config.sh
 export PATH=$PATH:/home/yamen/.exec
 
 ### Atuin
-eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"
 . "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"
 
 ### Prompt
-eval "$(oh-my-posh init zsh --config ~/.config/yamens/atomic.omp.json)"
-
+eval "$(oh-my-posh init zsh --config ~/.config/yamens/theme.omp.toml)"
 
 ### Zoxide
 eval "$(zoxide init zsh)"
 export _ZO_ECHO=1
+
+### Fzf
+eval "$(fzf --zsh)"
 

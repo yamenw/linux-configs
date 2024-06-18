@@ -222,8 +222,9 @@ type = "prompt"
 ]
   foreground = "#262626"
   invert_powerline = true
-  powerline_symbol = ""
-  style = "powerline"
+  leading_diamond = ""
+  trailing_diamond = ""
+  style = "diamond"
   template = " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }} "
   type = "battery"
 
@@ -231,19 +232,6 @@ type = "prompt"
     charged_icon = " "
     charging_icon = " "
     discharging_icon = " "
-
-  [[blocks.segments]]
-  background = "#40c4ff"
-  foreground = "#ffffff"
-  invert_powerline = true
-  leading_diamond = ""
-  style = "diamond"
-  template = "  {{ .CurrentDate | date .Format }} "
-  trailing_diamond = ""
-  type = "time"
-
-    [blocks.segments.properties]
-    time_format = "_2,15:04"
 
 [[blocks]]
 alignment = "left"

@@ -32,3 +32,14 @@ For executables, I use a directory called `~/.exec` that I add to `$PATH`.
 * [tldr](https://github.com/tldr-pages/tldr)
 * [rg](https://github.com/BurntSushi/ripgrep)
 
+## Dotfiles
+
+I use GNU stow to manage the [dotfiles directory](./dotfiles), here is a [simple tutorial](https://www.youtube.com/watch?v=y6XCebnB9gs) on this.
+
+Run the following:
+
+```bash
+stow . -t ~
+```
+
+

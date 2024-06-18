@@ -1,11 +1,3 @@
-
-. "$HOME/.atuin/bin/env"
-
-eval "$(atuin init zsh)"
-eval "$(oh-my-posh init zsh --config ~/atomic.omp.json)"
-
-
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -39,4 +31,21 @@ zinit light zsh-users/zsh-autosuggestions
 autoload -Uz compinit && compinit
 
 
+
+### Yamens scripts
+source ~/.config/yamens/functions.sh
+source ~/.config/yamens/nnn-config.sh
+export PATH=$PATH:/home/yamen/.exec
+
+### Atuin
+eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"
+. "$HOME/.atuin/bin/env"
+
+### Prompt
+eval "$(oh-my-posh init zsh --config ~/.config/yamens/atomic.omp.json)"
+
+
+### Zoxide
+eval "$(zoxide init zsh)"
+export _ZO_ECHO=1
 

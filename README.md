@@ -44,3 +44,7 @@ stow . -t ~
 
 You may also use [chezmoi](https://github.com/twpayne/chezmoi) for this but I liked symlinks more because of their simplicity.
 
+
+## Prompt
+
+The theme can be found [here](./theme.omp.toml) for OMP.

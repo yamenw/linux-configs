@@ -23,3 +23,7 @@ catuin () {
 cb () {
 	batcat $1
 }
+
+cll () {
+	exa --icons
+}

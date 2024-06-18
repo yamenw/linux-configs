@@ -20,7 +20,7 @@ For executables, I use a directory called `~/.exec` that I add to `$PATH`.
 ## Programs to Install
 
 * [brew](https://brew.sh/)
-* [nnn](https://github.com/jarun/nnn)
+* [nnn](https://github.com/jarun/nnn) or [yazi](https://github.com/sxyazi/yazi)
 * [fzf](https://github.com/junegunn/fzf)
 * [bat](https://github.com/sharkdp/bat)
 * [zellij](https://zellij.dev/)
@@ -29,4 +29,6 @@ For executables, I use a directory called `~/.exec` that I add to `$PATH`.
 * [exa](https://github.com/ogham/exa)
 * [btop](https://github.com/aristocratos/btop)
 * [zoxide](https://github.com/ajeetdsouza/zoxide)
+* [tldr](https://github.com/tldr-pages/tldr)
+* [rg](https://github.com/BurntSushi/ripgrep)
 

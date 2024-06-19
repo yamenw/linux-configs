@@ -31,6 +31,7 @@ For executables, I use a directory called `~/.exec` that I add to `$PATH`.
 * [zoxide](https://github.com/ajeetdsouza/zoxide)
 * [tldr](https://github.com/tldr-pages/tldr)
 * [rg](https://github.com/BurntSushi/ripgrep)
+* [jless](https://jless.io/)
 
 ## Dotfiles
 

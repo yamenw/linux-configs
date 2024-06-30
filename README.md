@@ -55,3 +55,8 @@ The theme can be found [here](./theme.omp.toml) for OMP.
 
 `zsh` is used with `zinit`.
 
+## Theme
+
+* [Nordic-Darker](https://github.com/EliverLara/Nordic)
+* [Papirus Icons](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
+

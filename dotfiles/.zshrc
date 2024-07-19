@@ -74,4 +74,5 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 ### PATH
 export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:/home/yamen/.local/bin"
 

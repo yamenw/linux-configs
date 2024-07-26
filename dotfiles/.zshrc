@@ -38,6 +38,8 @@ bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^[w' kill-region
+bindkey '^[[1;5D' backward-word  # Ctrl + Left Arrow
+bindkey '^[[1;5C' forward-word   # Ctrl + Right Arrow
 
 # History
 HISTSIZE=5000
@@ -60,7 +62,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='ls --color'
+alias ls='exa --icons --classify'
 alias vim='nvim'
 alias c='clear'
 

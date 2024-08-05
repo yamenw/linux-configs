@@ -2,6 +2,8 @@
 
 ## Dependencies
 
+Use PowerShell 7
+
 1. [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#windows-packages)
 2. [PSFzf](https://github.co%5B%5B%5D%5Dm/kelleyma49/PSFzf)
 3. [zoxide](https://github.com/ajeetdsouza/zoxide)

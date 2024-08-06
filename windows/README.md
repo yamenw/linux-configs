@@ -1,6 +1,12 @@
-# PowerShell Config
+# Windows Configs
 
-## Dependencies
+## Git Bash
+
+Install [ble.sh](https://github.com/akinomyoga/ble.sh/releases), make sure you get a binary, you also have to specify `$USER` for it to work.
+
+## PowerShell Config
+
+### Dependencies
 
 Use PowerShell 7
 
@@ -13,6 +19,6 @@ Use PowerShell 7
 
 Reload your shell, restart your terminal, or IDE, or even entire user sometimes to get the path to reload.
 
-## Usage
+### Usage
 
 Just clone it and [source it](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.4#dot-sourcing-operator-).

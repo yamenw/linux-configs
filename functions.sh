@@ -27,3 +27,7 @@ cb () {
 cll () {
 	exa --icons --classify $@
 }
+
+cfl () {
+	fzf --preview 'exa --icons --classify {}' --walker=dir --preview-window=right:40%
+}

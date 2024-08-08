@@ -16,6 +16,7 @@ Use PowerShell 7
 4. [PSReadLine](https://github.com/PowerShell/PSReadLine) (Might be already installed)
 5. [OMP](https://github.com/JanDeDobbeleer/oh-my-posh)
 6. [bat](https://github.com/sharkdp/bat)
+7. [eza](https://github.com/eza-community/eza)
 
 Reload your shell, restart your terminal, or IDE, or even entire user sometimes to get the path to reload.
 

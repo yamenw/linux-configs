@@ -68,7 +68,7 @@ alias c='clear'
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 export _ZO_ECHO=1
 #source "$HOME/.atuin/bin/env"
 #eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"

@@ -62,17 +62,21 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='exa --icons --classify'
+alias l='exa --icons --classify'
 alias vim='nvim'
 alias c='clear'
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 export _ZO_ECHO=1
-eval "$(oh-my-posh init zsh --config ~/.config/yamens/theme.omp.toml)"
 #source "$HOME/.atuin/bin/env"
 #eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"
+
+# Prompt
+eval "$(oh-my-posh init zsh --config ~/.config/yamens/theme.omp.toml)"
+oh-my-posh toggle executiontime
+
 
 # PATH
 export PATH=$PATH:/home/yamen/.exec

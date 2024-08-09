@@ -132,3 +132,4 @@ eval "$(fzf --bash)"
 source ~/.config/yamens/entrypoint.sh
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"

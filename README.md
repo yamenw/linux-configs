@@ -1,6 +1,6 @@
 # Personal Configs Repo
 
-*just configs that I have on my personal machine*
+Just configs that I have on my personal machine, clone the repo and source them where you want them.
 
 > [!NOTE]
 > I just made this to share with friends.
@@ -26,7 +26,7 @@ For executables, I use a directory called `~/.exec` that I add to `$PATH`.
 * [zellij](https://zellij.dev/)
 * [oh-my-posh](https://ohmyposh.dev/)
 * [atuin](https://github.com/atuinsh/atuin)
-* [exa](https://github.com/ogham/exa)
+* [eza](https://github.com/eza-community/eza)
 * [btop](https://github.com/aristocratos/btop)
 * [zoxide](https://github.com/ajeetdsouza/zoxide)
 * [tldr](https://github.com/tldr-pages/tldr)
@@ -46,7 +46,6 @@ stow . -t ~
 
 You may also use [chezmoi](https://github.com/twpayne/chezmoi) for this but I liked symlinks more because of their simplicity.
 
-
 ## Prompt
 
 The theme can be found [here](./theme.omp.toml) for OMP.
@@ -55,8 +54,7 @@ The theme can be found [here](./theme.omp.toml) for OMP.
 
 `zsh` is used with `zinit`.
 
-## Theme
+## Desktop Theme
 
 * [Nordic-Darker](https://github.com/EliverLara/Nordic)
 * [Papirus Icons](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
-

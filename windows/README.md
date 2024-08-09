@@ -1,5 +1,8 @@
 # Windows Configs
 
+> [!NOTE]
+> It's recommended that you only source this instead of symlinking them, that way, you can have machine specific configs.
+
 ## Git Bash
 
 Install [ble.sh](https://github.com/akinomyoga/ble.sh/releases), make sure you get a binary, you also have to specify `$USER` for it to work.

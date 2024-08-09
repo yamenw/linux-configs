@@ -16,6 +16,6 @@ function cfbat {
 }
 
 function cdf {
-    $TARGET=$(fzf --preview 'eza --all --icons=always --classify {}' --walker=dir,hidden --preview-window=right:40%)
+    $TARGET=$(fzf --preview 'eza --all --icons=always --classify {}' --walker=dir,hidden --preview-window=bottom:20%)
     if ($TARGET) { z $TARGET };
 }

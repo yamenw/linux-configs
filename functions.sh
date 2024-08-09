@@ -29,9 +29,9 @@ cll() {
 }
 
 cfl() {
-	fzf --preview 'exa --icons --classify {}' --walker=dir --preview-window=right:40%
+	fzf --preview 'eza --icons --classify {}' --walker=dir --preview-window=right:40%
 }
 
 cdf() {
-	z $(fzf --preview 'exa --all --icons --classify {}' --walker=dir,hidden --preview-window=right:40% || pwd)
+	z $(fzf --preview 'eza --all --icons --classify {}' --walker=dir,hidden --preview-window=right:40% || pwd)
 }

@@ -62,9 +62,10 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias l='exa --icons --classify'
+alias l='eza --icons --classify'
 alias vim='nvim'
 alias c='clear'
+alias bat='batcat'
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -82,6 +83,7 @@ oh-my-posh toggle executiontime
 export PATH=$PATH:/home/yamen/.exec
 export PATH=$PATH:/opt/nvim-linux64/bin
 export PATH=$PATH:/home/yamen/.local/bin
+. "$HOME/.cargo/env"
 
 # scripts
 source ~/.config/yamens/functions.sh

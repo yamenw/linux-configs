@@ -1,7 +1,7 @@
 # Windows Configs
 
 > [!NOTE]
-> It's recommended that you only source this instead of symlinking them, that way, you can have machine specific configs.
+> It's recommended that you only source this instead of symlinking them, that way, you can have machine specific configs, also good for keeping secrets like IPs.
 
 ## Git Bash
 
@@ -20,6 +20,7 @@ Use PowerShell 7
 5. [OMP](https://github.com/JanDeDobbeleer/oh-my-posh)
 6. [bat](https://github.com/sharkdp/bat)
 7. [eza](https://github.com/eza-community/eza)
+8. [sshs](https://github.com/quantumsheep/sshs)
 
 Reload your shell, restart your terminal, or IDE, or even entire user sometimes to get the path to reload.
 

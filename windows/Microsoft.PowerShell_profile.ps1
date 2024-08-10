@@ -19,3 +19,13 @@ function cdf {
     $TARGET=$(fzf --preview 'eza --all --icons=always --classify {}' --walker=dir,hidden --preview-window=bottom:20%)
     if ($TARGET) { z $TARGET };
 }
+
+<# 
+.DESCRIPTION
+Example config in .ssh/config for invoking this
+here, its a file not a function
+ProxyCommand bash -c "ncat $(powershell -File ~/.ssh/get-laptop-ip.ps1) %p"
+#>
+function laptopip {
+    Write-Output $(Get-NetNeighbor -AddressFamily IPv4 | Where-Object { $_.LinkLayerAddress -eq $LAPTOP_MAC_ADDRESS } | Select-Object -ExpandProperty IPAddress)
+}

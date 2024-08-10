@@ -20,18 +20,15 @@ catuin() {
 	atuin search -i
 }
 
-cb() {
-	batcat $1
-}
-
-cll() {
-	exa --icons --classify $@
-}
-
 cfl() {
 	fzf --preview 'eza --icons --classify {}' --walker=dir --preview-window=right:40%
 }
 
 cdf() {
 	z $(fzf --preview 'eza --all --icons --classify {}' --walker=dir,hidden --preview-window=right:40% || pwd)
+}
+
+git-contrib-percent() {
+	local TOTAL=$(git rev-list --all --count)
+	git shortlog -s -n | awk '{p = $1/ENVIRON["TOTAL"]; printf "%.4f%% %s\n", p, $2}'
 }

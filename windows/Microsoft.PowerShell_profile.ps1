@@ -1,4 +1,4 @@
-oh-my-posh.exe init pwsh --config "$env:POSH_THEMES_PATH\craver.omp.json" | Invoke-Expression
+oh-my-posh.exe init pwsh --config "$MY_POSH_THEME" | Invoke-Expression
 
 if ($host.Name -eq 'ConsoleHost') {
     Import-Module PSReadLine

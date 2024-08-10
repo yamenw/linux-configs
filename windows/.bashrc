@@ -11,3 +11,6 @@ export USER=yamen
 
 export _ZO_ECHO=1
 eval "$(zoxide init bash)"
+
+# https://github.com/akinomyoga/ble.sh/issues/57#issuecomment-631870907
+bleopt prompt_ps1_transient=always:trim

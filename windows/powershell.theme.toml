@@ -1,0 +1,93 @@
+# This is just modified craver
+console_title_template = "{{if .Root}}(Admin) {{end}}{{.Folder}}"
+version = 2
+
+[[blocks]]
+alignment = "left"
+type = "prompt"
+
+[[blocks.segments]]
+background = "#f1184c"
+foreground = "#242424"
+powerline_symbol = ""
+style = "powerline"
+template = ""
+type = "root"
+
+[[blocks.segments]]
+background = "#282c34"
+foreground = "#3A86FF"
+leading_diamond = " "
+style = "diamond"
+template = " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
+type = "os"
+
+[[blocks.segments]]
+background = "#242424"
+foreground = "#33DD2D"
+powerline_symbol = ""
+style = "powerline"
+template = " {{ .Path }} "
+type = "path"
+
+[blocks.segments.properties]
+folder_separator_icon = "/"
+style = "folder"
+
+[[blocks.segments]]
+background = "#242424"
+foreground = "#3A86FF"
+powerline_symbol = ""
+style = "powerline"
+template = "{{ .UpstreamIcon }}{{ .HEAD }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} "
+type = "git"
+
+[blocks.segments.properties]
+fetch_stash_count = true
+fetch_status = true
+fetch_upstream_icon = true
+
+[[blocks.segments]]
+background = "#0184bc"
+foreground = "#ffffff"
+powerline_symbol = ""
+style = "powerline"
+template = "  {{ if .Unsupported }}{{ else }}{{ .Full }}{{ end }} "
+type = "dotnet"
+
+[[blocks.segments]]
+background = "#8800dd"
+foreground = "#ffffff"
+powerline_symbol = ""
+style = "powerline"
+template = " <#fefefe></> {{ .FormattedMs }} "
+type = "executiontime"
+
+[blocks.segments.properties]
+style = "austin"
+threshold = 1
+
+[[blocks.segments]]
+background = "#33DD2D"
+background_templates = ["{{ if gt .Code 0 }}#f1184c{{ end }}"]
+foreground = "#242424"
+powerline_symbol = ""
+style = "powerline"
+template = "  "
+type = "status"
+
+[[blocks]]
+alignment = "left"
+newline = true
+type = "prompt"
+
+[[blocks.segments]]
+foreground = "#f1184c"
+style = "plain"
+template = "➜ "
+type = "text"
+
+[transient_prompt]
+background = "transparent"
+foreground = "#ffffff"
+template = "{{ .Shell }}> "

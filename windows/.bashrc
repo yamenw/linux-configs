@@ -14,3 +14,14 @@ eval "$(zoxide init bash)"
 
 # https://github.com/akinomyoga/ble.sh/issues/57#issuecomment-631870907
 bleopt prompt_ps1_transient=always:trim
+
+# Did not like any SSH config managers I found, so I made my own
+cssh() {
+    SELECTED_HOST=$(grep "^Host " ~/.ssh/config | awk '{print $2}' | fzf --multi --preview 'ssh -TG {} | grep -e "^user " -e "^hostname"  -e "^identityfile " -e "^port " | column -t' --preview-window=bottom:4)
+
+    if [[ $? -gt 0 ]]; then
+        return
+    fi
+
+    ssh $SELECTED_HOST
+}

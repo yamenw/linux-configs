@@ -1,6 +1,9 @@
 # IMPORTANT: OMP will use the default theme if the path is incorrect
 # Without printing any errors
-oh-my-posh.exe init pwsh --config "$OMP_THEME_PATH" | Invoke-Expression
+
+# Set $CONFIG_REPO_PATH to the path of this repo
+
+oh-my-posh.exe init pwsh --config "$CONFIG_REPO_PATH\windows\powershell.omp.toml" | Invoke-Expression
 
 if ($host.Name -eq 'ConsoleHost') {
     Import-Module PSReadLine
@@ -39,8 +42,7 @@ function get-host-info([string]$HOSTNAME) {
 
 function cssh {
     $ALL_HOSTS = $(Get-Content ~\.ssh\config | Select-String -Pattern "^Host ")
-    $SELECTED_HOST=$(Write-Output $ALL_HOSTS | ForEach-Object { ($_ -split '\s+')[1] } | fzf --multi)
-
+    $SELECTED_HOST=$(Write-Output $ALL_HOSTS | ForEach-Object { ($_ -split '\s+')[1] } | fzf --multi --preview "powershell.exe -File $CONFIG_REPO_PATH\windows\get-host-info.ps1 -HOSTNAME {}" --preview-window=bottom:4)
     if (-not $? -or -not $SELECTED_HOST) {
         return
     }

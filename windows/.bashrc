@@ -16,8 +16,18 @@ eval "$(zoxide init bash)"
 bleopt prompt_ps1_transient=always:trim
 
 # Did not like any SSH config managers I found, so I made my own
+
+format-ssh-host-info() {
+    ssh -TG $1 | grep -e "^user " -e "^hostname"  -e "^identityfile " -e "^port " | column -t
+}
+
+get-all-ssh-config-hosts() {
+    grep "^Host " ~/.ssh/config | awk '{print $2}'
+}
+
 cssh() {
-    SELECTED_HOST=$(grep "^Host " ~/.ssh/config | awk '{print $2}' | fzf --multi --preview 'ssh -TG {} | grep -e "^user " -e "^hostname"  -e "^identityfile " -e "^port " | column -t' --preview-window=bottom:4)
+    export -f format-ssh-host-info
+    SELECTED_HOST=$(get-all-ssh-config-hosts | fzf --multi --preview 'format-ssh-host-info {}' --preview-window=bottom:4)
 
     if [[ $? -gt 0 ]]; then
         return

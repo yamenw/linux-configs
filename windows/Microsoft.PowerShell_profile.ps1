@@ -14,6 +14,18 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory
 $env:_ZO_ECHO = "1"
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
+<# 
+.DESCRIPTION
+https://superuser.com/questions/1767008/prevent-certain-commands-from-being-logged-by-history-in-powershell
+#>
+Set-PSReadLineOption -AddToHistoryHandler {
+    param($command)
+    if ($command -like ' *') {
+        return $false
+    }
+    return $true
+}
+
 # Functions
 
 function cfbat {

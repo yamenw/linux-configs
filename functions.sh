@@ -32,3 +32,10 @@ git-contrib-percent() {
 	local TOTAL=$(git rev-list --all --count)
 	git shortlog -s -n | awk '{p = $1/ENVIRON["TOTAL"]; printf "%.4f%% %s\n", p, $2}'
 }
+
+search-zip() {
+	unzip -t $1 || return 1
+
+	unzip -l $1 | awk 'NR>3 {print $NF}' | head -n -2 | fzf --preview="unzip -p $1 {} > ~/.fzf-preview/{} ; termimage -s 24x24 ~/.fzf-preview/{}"
+	rm -f ~/.fzf-preview/*
+}

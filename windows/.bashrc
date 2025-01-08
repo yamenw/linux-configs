@@ -35,3 +35,12 @@ cssh() {
 
     ssh $SELECTED_HOST
 }
+
+clipd() { 
+    mkdir -p "$HOME/nano-clips"
+    local TIMESTAMP=$(date -d 'today' +'%Y-%m-%d-%H-%M-%S')
+    local FILEPATH="$HOME/nano-clips/$TIMESTAMP.txt"
+    touch $FILEPATH
+    powershell -command "Get-Clipboard" > $(realpath "$FILEPATH")
+    nano $FILEPATH
+}

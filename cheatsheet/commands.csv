@@ -1,0 +1,5 @@
+short_title,description,command
+list_files,List files in the current directory,ls -l
+show_disk_usage,Display disk usage,df -h
+check_memory,Check memory usage,free -m
+take_until_space,Drop everything after the first space,cut -d " " -f1
